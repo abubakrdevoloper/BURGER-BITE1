@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0f0f0f">
+  <title>BURGER & BITE — Mazali lahzalar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="announcement">🔥 Bugungi maxsus taklif: 100 000 so‘mdan yuqori buyurtmaga yetkazib berish BEPUL!</div>
+  <header class="header">
+    <a class="brand" href="#home" aria-label="Bosh sahifa"><span class="brand-mark">B<span>&</span>B</span><span>BURGER
+        <b>& BITE</b><small>MAZALI LAHZALAR</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menyuni ochish">☰</button>
+    <nav id="mainNav"><a href="#home">Bosh sahifa</a><a href="#menu">Menyu</a><a href="#branches">Filiallar</a><a
+        href="#about">Biz haqimizda</a></nav>
+    <div class="header-actions"><button class="icon-btn" id="searchToggle" title="Qidirish">⌕</button><button
+        class="icon-btn" id="favNav" title="Sevimlilar">♡</button><button class="icon-btn cart-trigger" id="cartOpen"
+        title="Savat">🛒<i id="cartCount">0</i></button><button class="login-btn" id="authNav">Kirish / Ro‘yxatdan
+        o‘tish</button><button class="profile-chip hidden" id="profileNav"></button></div>
+  </header>
+  <div class="search-strip hidden" id="searchStrip"><input id="globalSearch"
+      placeholder="Taom yoki masalliq nomini yozing..."><button id="searchGo">Qidirish</button></div>
+  <main id="app">
+    <section class="view active" id="homeView">
+      <section class="hero wrap">
+        <div class="hero-copy"><span class="eyebrow"><i></i> HAR BIR TISHLOMDA LAZZAT</span>
+          <h1>Ochlikka<br><em>nuqta qo‘ying.</em></h1>
+          <p>Yangi tayyorlangan burgerlar, qarsildoq tovuqlar va sevimli ta’mlaringiz — barchasi bir joyda.</p>
+          <div class="hero-buttons"><button class="primary-btn" data-go="menu">Hoziroq buyurtma berish
+              <b>↗</b></button><button class="text-btn" data-go="menu">Menyuni ko‘rish <span>→</span></button></div>
+          <div class="hero-stats">
+            <div><b>25<span>+</span></b><small>Taom turi</small></div>
+            <div><b>30<span>min</span></b><small>O‘rtacha yetkazish</small></div>
+            <div><b>4.9<span>★</span></b><small>Mijozlar bahosi</small></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-glow"></div><img
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1100&q=90"
+            alt="Mazali cheeseburger">
+          <div class="floating-tag tag-one">🔥 <b>TOP</b><small>BURGER</small></div>
+          <div class="floating-tag tag-two"><b>35 000</b><small>so‘mdan</small></div>
+          <div class="hero-ring">FRESH<br> & TASTY</div>
+        </div>
+      </section>
+      <section class="wrap category-section">
+        <div class="section-head">
+          <div><span class="eyebrow">NIMANI XOHLAYSIZ?</span>
+            <h2>Ta’mni <em>tanlang</em></h2>
+          </div><button class="link-btn" data-go="menu">Barcha menyu <b>→</b></button>
+        </div>
+        <div class="category-grid" id="homeCategories"></div>
+      </section>
+      <section class="wrap popular-section">
+        <div class="section-head">
+          <div><span class="eyebrow">MIJOZLAR TANLOVI</span>
+            <h2>Ommabop <em>taomlar</em></h2>
+          </div><button class="link-btn" data-go="menu">Menyuga o‘tish →</button>
+        </div>
+        <div class="product-grid" id="popularProducts"></div>
+      </section>
+      <section class="combo-banner wrap">
+        <div><span class="eyebrow">BIRGA YANADA MAZALI</span>
+          <h2>Kombo oling,<br><em>ko‘proq tejang!</em></h2>
+          <p>Sevimli taomlaringiz bir to‘plamda. Maxsus narxlar sizni kutmoqda.</p><button class="primary-btn"
+            data-go="menu">Kombolarni ko‘rish →</button>
+        </div><img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=900&q=85"
+          alt="Burger va fri kombo">
+      </section>
+      <section class="why-section">
+        <div class="wrap">
+          <div class="section-head">
+            <div><span class="eyebrow">BIZNING USTUNLIGIMIZ</span>
+              <h2>Nega aynan <em>biz?</em></h2>
+            </div>
+          </div>
+          <div class="why-grid">
+            <article><span>✦</span>
+              <h3>Har kuni yangi</h3>
+              <p>Taomlar buyurtmangizdan so‘ng yangi masalliqlardan tayyorlanadi.</p>
+            </article>
+            <article><span>⚡</span>
+              <h3>Tez yetkazamiz</h3>
+              <p>Buyurtmangizni issiq va mazali holatda eshigingizgacha olib boramiz.</p>
+            </article>
+            <article><span>♡</span>
+              <h3>Mehr bilan</h3>
+              <p>Har bir retseptda sifat, e’tibor va ajoyib ta’m mujassam.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="wrap reviews">
+        <div class="section-head">
+          <div><span class="eyebrow">FIKRLAR</span>
+            <h2>Mijozlarimiz <em>nima deydi?</em></h2>
+          </div>
+        </div>
+        <div class="review-grid">
+          <article>
+            <div class="stars">★★★★★</div>
+            <p>“Burger juda mazali, mahsulotlar yangi. Yetkazib berish ham tez bo‘ldi!”</p><b>— Madina</b>
+          </article>
+          <article>
+            <div class="stars">★★★★★</div>
+            <p>“Kombo setlari juda qulay. Oilaviy kechki ovqat uchun ayni muddao.”</p><b>— Sardor</b>
+          </article>
+          <article>
+            <div class="stars">★★★★★</div>
+            <p>“Buyurtma berish oson, menyu tushunarli. Yana albatta buyurtma qilaman.”</p><b>— Aziza</b>
+          </article>
+        </div>
+      </section>
+    </section>
+    <section class="view wrap page-view" id="menuView">
+      <div class="page-heading"><span class="eyebrow">MAZALI TANLOV</span>
+        <h1>Bizning <em>menyu</em></h1>
+        <p>Kayfiyatingizga mos taomni tanlang.</p>
+      </div>
+      <div class="catalog-tools">
+        <div class="search-box">⌕ <input id="menuSearch" placeholder="Taom nomi yoki masalliq..."></div><select
+          id="sortSelect">
+          <option value="popular">Tavsiya etilgan</option>
+          <option value="low">Avval arzonlari</option>
+          <option value="high">Avval qimmatlari</option>
+        </select>
+      </div>
+      <div class="category-tabs" id="categoryTabs"></div>
+      <div class="catalog-layout">
+        <aside class="filter-panel">
+          <h3>Filtrlash</h3><label>Narx oralig‘i</label><input type="range" min="5000" max="150000" step="5000"
+            value="150000" id="priceRange">
+          <p>150 000 so‘mgacha</p><button class="outline-btn" id="clearFilters">Filtrni tozalash</button>
+        </aside>
+        <div class="catalog-main">
+          <div class="results-line" id="resultsLine"></div>
+          <div class="product-grid" id="menuProducts"></div>
+        </div>
+      </div>
+    </section>
+    <section class="view wrap page-view" id="authView">
+      <div class="auth-layout">
+        <div class="auth-art"><span class="eyebrow">BURGER & BITE OILASIGA QO‘SHILING</span>
+          <h2>Yaxshi ta’m<br><em>yaqinroq.</em></h2>
+          <p>Ro‘yxatdan o‘ting va buyurtmalaringizni qulay boshqaring.</p><img
+            src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=850&q=85"
+            alt="Burger">
+        </div>
+        <div class="auth-card">
+          <div class="auth-tabs"><button class="selected" data-auth-tab="login">Kirish</button><button
+              data-auth-tab="register">Ro‘yxatdan o‘tish</button></div>
+          <form id="authForm">
+            <h2 id="authTitle">Xush kelibsiz!</h2>
+            <p id="authSubtitle">Hisobingizga kiring.</p><label class="register-only hidden">Ism va familiya<input
+                id="authName" placeholder="Masalan, Ali Valiyev"></label><label>Telefon raqami<input id="authPhone"
+                inputmode="tel" placeholder="+998 90 123 45 67" required></label><label>Parol<input id="authPassword"
+                type="password" minlength="4" placeholder="Parolingiz" required></label><label
+              class="register-only hidden">Manzil<input id="authAddress" placeholder="Tuman, ko‘cha, uy"></label><button
+              class="primary-btn full" type="submit" id="authSubmit">Kirish →</button><small class="form-note">Demo
+              rejim: ma’lumotlar ushbu brauzer xotirasida saqlanadi.</small>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="view wrap page-view" id="profileView">
+      <div class="page-heading"><span class="eyebrow">SHAXSIY KABINET</span>
+        <h1>Salom, <em id="profileName">mehmon</em>!</h1>
+        <p>Profilingiz va buyurtmalaringiz shu yerda.</p>
+      </div>
+      <div class="profile-grid">
+        <aside class="profile-side">
+          <div class="avatar" id="avatar">B</div>
+          <h3 id="profileFullName"></h3>
+          <p id="profilePhone"></p><button class="outline-btn" id="logoutBtn">Hisobdan chiqish</button>
+        </aside>
+        <div class="orders-panel">
+          <h2>Buyurtmalar tarixi</h2>
+          <div id="orderHistory"></div>
+        </div>
+      </div>
+    </section>
+    <section class="view wrap page-view" id="trackingView">
+      <div class="page-heading"><span class="eyebrow">BUYURTMANGIZ HOLATI</span>
+        <h1>Buyurtma <em>kuzatuvi</em></h1>
+        <p id="trackingOrderText">Buyurtma holatini shu yerda kuzating.</p>
+      </div>
+      <div class="tracking-card" id="trackingCard">
+        <div class="tracking-empty">Hozircha kuzatilayotgan buyurtma yo‘q. <button class="text-btn"
+            data-go="menu">Menyuga o‘tish →</button></div>
+      </div>
+    </section>
+    <section class="view wrap page-view" id="branchesView">
+      <div class="page-heading"><span class="eyebrow">BIZGA TASHRIF BUYURING</span>
+        <h1>Bizning <em>filiallar</em></h1>
+        <p>Sizga eng yaqin manzilni tanlang.</p>
+      </div>
+      <div class="branch-layout">
+        <div class="branch-list">
+          <article><span>01</span>
+            <div>
+              <h3>Markaziy filial</h3>
+              <p>Toshkent shahri, Amir Temur shoh ko‘chasi, 15</p><small>Har kuni: 10:00 — 23:00 · +998 71 200 20
+                20</small>
+            </div>
+          </article>
+          <article><span>02</span>
+            <div>
+              <h3>Chilonzor filiali</h3>
+              <p>Toshkent shahri, Chilonzor 9-mavze, 12</p><small>Har kuni: 10:00 — 23:00 · +998 71 200 20 21</small>
+            </div>
+          </article>
+          <article><span>03</span>
+            <div>
+              <h3>Yunusobod filiali</h3>
+              <p>Toshkent shahri, Yunusobod 4-mavze, 8</p><small>Har kuni: 10:00 — 23:00 · +998 71 200 20 22</small>
+            </div>
+          </article>
+        </div>
+        <form class="feedback-card" id="feedbackForm">
+          <h2>Biz bilan bog‘laning</h2>
+          <p>Savol yoki taklifingiz bormi?</p><label>Ismingiz<input required
+              placeholder="Ismingiz"></label><label>Telefon raqamingiz<input required
+              placeholder="+998 90 123 45 67"></label><label>Xabaringiz<textarea required rows="4"
+              placeholder="Xabaringizni yozing..."></textarea></label><button class="primary-btn full">Xabar yuborish
+            →</button>
+        </form>
+      </div>
+    </section>
+    <section class="view wrap page-view" id="aboutView">
+      <div class="page-heading"><span class="eyebrow">BIZ KIMMIZ?</span>
+        <h1>Ta’mga bo‘lgan <em>muhabbat.</em></h1>
+        <p>BURGER & BITE — mazali lahzalar va unutilmas uchrashuvlar manzili.</p>
+      </div>
+      <div class="about-layout"><img
+          src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1000&q=85"
+          alt="Restoran taomlari">
+        <div>
+          <h2>Sifat — har bir luqmada.</h2>
+          <p>Biz sevimli fast food taomlaringizni yangi masalliqlar, puxta retseptlar va samimiy xizmat bilan
+            tayyorlaymiz. Maqsadimiz — har bir buyurtmada sizga quvonch ulashish.</p>
+          <div class="about-numbers"><b>25+<small>Taom
+                turi</small></b><b>3<small>Filial</small></b><b>4.9★<small>Mijozlar bahosi</small></b></div><button
+            class="primary-btn" data-go="menu">Menyuni ko‘rish →</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer-main">
+      <div class="brand footer-brand"><span class="brand-mark">B<span>&</span>B</span><span>BURGER <b>&
+            BITE</b><small>MAZALI LAHZALAR</small></span></div>
+      <p>Har bir tishlamda yangi taassurot. Mazali lahzalar biz bilan boshlanadi.</p>
+      <div><b>Tezkor havolalar</b><a href="#menu">Menyu</a><a href="#branches">Filiallar</a><a href="#about">Biz
+          haqimizda</a></div>
+      <div><b>Aloqa</b><span>+998 71 200 20 20</span><span>hello@burgerbite.uz</span><span>Toshkent, O‘zbekiston</span>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">© 2025 BURGER & BITE. Barcha huquqlar himoyalangan. <span>Mehr bilan tayyorlandi
+        ♥</span></div>
+  </footer>
+  <div class="overlay hidden" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-head">
+      <h2>Savatingiz <span id="drawerCount">(0)</span></h2><button class="close-btn" id="cartClose">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-bottom">
+      <div class="promo-row"><input id="promoInput" placeholder="Promo kod"><button id="promoApply">Qo‘llash</button>
+      </div>
+      <div class="totals">
+        <p><span>Mahsulotlar</span><b id="subtotal">0 so‘m</b></p>
+        <p><span>Yetkazib berish</span><b id="delivery">0 so‘m</b></p>
+        <p id="discountRow" class="discount hidden"><span>Chegirma</span><b id="discountAmount">0 so‘m</b></p>
+        <p class="grand"><span>Jami</span><b id="grandTotal">0 so‘m</b></p>
+      </div><button class="primary-btn full" id="checkoutBtn">Buyurtmani rasmiylashtirish →</button><small>100 000
+        so‘mdan yuqori buyurtmaga yetkazish bepul.</small>
+    </div>
+  </aside>
+  <div class="modal-wrap hidden" id="productModal">
+    <div class="modal product-modal"><button class="close-btn modal-close" data-close="productModal">✕</button>
+      <div id="productModalContent"></div>
+    </div>
+  </div>
+  <div class="modal-wrap hidden" id="checkoutModal">
+    <div class="modal checkout-modal"><button class="close-btn modal-close" data-close="checkoutModal">✕</button>
+      <h2>Buyurtmani <em>rasmiylashtirish</em></h2>
+      <form id="checkoutForm">
+        <div class="delivery-switch"><label><input type="radio" name="deliveryType" value="delivery" checked> Yetkazib
+            berish</label><label><input type="radio" name="deliveryType" value="pickup"> Olib ketish</label></div>
+        <label>Ism va familiya<input id="checkoutName" required></label><label>Telefon raqami<input id="checkoutPhone"
+            required placeholder="+998 90 123 45 67"></label><label id="addressField">Yetkazib berish manzili<input
+            id="checkoutAddress" required placeholder="Manzilni kiriting"></label><label>To‘lov usuli<select
+            id="paymentMethod">
+            <option>Naqd pul</option>
+            <option>Click (demo)</option>
+            <option>Payme (demo)</option>
+            <option>Uzcard / Humo (demo)</option>
+          </select></label>
+        <div class="checkout-total"><span>To‘lov summasi</span><b id="checkoutTotal">0 so‘m</b></div><button
+          class="primary-btn full">Buyurtmani tasdiqlash →</button><small>Elektron to‘lov tanlansa, bu demo loyiha
+          bo‘lgani uchun haqiqiy pul yechilmaydi.</small>
+      </form>
+    </div>
+  </div>
+  <div class="modal-wrap hidden" id="receiptModal">
+    <div class="modal receipt-modal">
+      <div class="receipt-icon">✓</div><span class="eyebrow">MUVAFFAQIYATLI</span>
+      <h2>Buyurtma qabul qilindi!</h2>
+      <p id="receiptText"></p><button class="primary-btn full" id="trackNow">Buyurtmani kuzatish →</button>
+    </div>
+  </div>
+  <div class="toast-container" id="toasts"></div>
+  <script src="app.js"></script>
+</body>
+
+</html>
